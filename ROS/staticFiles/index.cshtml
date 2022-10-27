@@ -1,0 +1,33 @@
+@using ROS
+@model IEnumerable<ROS.Entity.Cheque>
+    @{ 
+    //ViewData["Title"] = "Список смартфонов"; 
+    Layout = null;
+    }
+    
+    <html lang="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <head>
+        <title>Магазин смартфонов</title>
+    </head>
+    <body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>Модель</td>
+            <td>Производитель</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        @foreach (var cheque in Model)
+        {
+        <tr>
+            <td>@cheque.ShopId</td>
+            <td>@cheque.TotalAmount</td>
+            <td>@cheque.Time</td>
+            <td><a href="~/Home/Buy/@cheque.ChequeId">Купить</a></td>
+        </tr>
+        }
+    </table>
+    </body>
+    </html>
