@@ -1,0 +1,20 @@
+﻿2023-01-04 09:59:38,398 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-04 09:59:38,613 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-04 09:59:38,714 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-04 09:59:38,777 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-04 09:59:38,831 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-04 10:01:29,544 INFO  complete
+2023-01-04 10:03:41,406 INFO  complete
+2023-01-04 10:04:45,850 INFO  complete
+2023-01-04 10:08:48,306 INFO  complete
+2023-01-04 13:35:47,376 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-04 13:35:47,506 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-04 13:35:47,518 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-04 13:35:47,522 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-04 13:35:47,522 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-04 13:37:30,651 INFO  complete
+2023-01-04 13:37:31,200 INFO  complete
+2023-01-04 16:51:39,140 INFO  complete
+2023-01-04 17:34:29,105 INFO  complete
+2023-01-04 18:19:30,469 INFO  complete
+2023-01-04 18:19:32,441 INFO  complete

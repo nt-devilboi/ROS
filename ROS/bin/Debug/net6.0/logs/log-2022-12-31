@@ -1,0 +1,22 @@
+﻿2022-12-31 14:00:30,272 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2022-12-31 14:00:30,428 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2022-12-31 14:00:30,501 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2022-12-31 14:00:30,513 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2022-12-31 14:00:30,516 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2022-12-31 14:12:31,138 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2022-12-31 14:12:31,251 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2022-12-31 14:12:31,287 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2022-12-31 14:12:31,297 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2022-12-31 14:12:31,298 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2022-12-31 17:29:33,182 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2022-12-31 17:30:06,883 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2022-12-31 17:30:07,027 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2022-12-31 17:30:07,053 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2022-12-31 17:30:07,062 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2022-12-31 17:30:07,066 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2022-12-31 18:10:58,083 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2022-12-31 18:11:30,069 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2022-12-31 18:11:30,175 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2022-12-31 18:11:30,204 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2022-12-31 18:11:30,213 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2022-12-31 18:11:30,225 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\

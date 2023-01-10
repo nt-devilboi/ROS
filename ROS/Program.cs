@@ -33,10 +33,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddMvc();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IChequeRepository, ChequeRepository>();
+builder.Services.AddSingleton<IRepository<Cheque>, ChequeRepository>();
+builder.Services.AddSingleton<IRepository<Product>, ProductRepository>();
 builder.Services.AddSingleton<IProduct, Product>();
 builder.Services.AddSingleton<IShop, Shop>();
-builder.Services.AddScoped<ChequeContext>();
+builder.Services.AddScoped<PurchaseContext>();
 
 builder.Services.AddSingleton<ILog>(log);
 var app = builder.Build();

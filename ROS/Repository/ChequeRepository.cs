@@ -3,30 +3,33 @@ using ROS.Entity;
 
 namespace ROS;
 
-public class ChequeRepository : IChequeRepository
+public class ChequeRepository : IRepository<Cheque>
 {
-    private ChequeContext _db = new ChequeContext();
+    private PurchaseContext _db = new PurchaseContext();
 
-    public void Create(string shopId, double totalAmount, DateTime time)
+    public void Add(Cheque cheque)
     {
-        _db.Cheques.Add(new Cheque()
+        _db.cheques.Add(new Cheque()
         {
-            ShopId = shopId, TotalAmount = totalAmount, Time = time
+            ChequeId = cheque.ChequeId, 
+            ShopId = cheque.ShopId,
+            Time = cheque.Time,
+            TotalAmount = cheque.TotalAmount
         });
     }
-    
+
 
     public async Task<List<Cheque>> ToList()
     {
-        return _db.Cheques.ToList();
+        return _db.cheques.ToList();
     }
 
     public async Task<Cheque> Get(Guid guid)
     {
-        return (await _db.Cheques.FindAsync(guid))!;
+        return (await _db.cheques.FindAsync(guid))!;
     }
 
-    public async void SaveChanges()
+    public void SaveChanges()
     {
         _db.SaveChanges();
     }

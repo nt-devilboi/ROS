@@ -5,14 +5,10 @@
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/Humanizer.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Humanizer.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/7.0.0-rc.2.22472.11": {
@@ -25,14 +21,10 @@
           "Microsoft.Extensions.Logging": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props": {}
@@ -41,14 +33,10 @@
       "Microsoft.EntityFrameworkCore.Abstractions/7.0.0-rc.2.22472.11": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/7.0.0-rc.2.22472.11": {
@@ -69,14 +57,10 @@
           "Mono.TextTemplating": "2.2.1"
         },
         "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {}
         },
         "build": {
           "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
@@ -89,14 +73,10 @@
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Tools/7.0.0-rc.2.22472.11": {
@@ -128,14 +108,10 @@
           "Microsoft.Extensions.Primitives": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -151,14 +127,10 @@
           "Microsoft.Extensions.Primitives": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Caching.Memory.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Caching.Memory.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -170,14 +142,10 @@
           "Microsoft.Extensions.Primitives": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -189,14 +157,10 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -205,14 +169,10 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0-rc.2.22472.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -225,14 +185,10 @@
           "System.Text.Json": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyModel.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.DependencyModel.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -247,14 +203,10 @@
           "Microsoft.Extensions.Options": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Logging.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Logging.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Logging.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -263,14 +215,10 @@
       "Microsoft.Extensions.Logging.Abstractions/7.0.0-rc.2.22472.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
@@ -283,14 +231,10 @@
           "Microsoft.Extensions.Primitives": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Options.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Options.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Options.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Options.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -302,14 +246,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -318,14 +258,10 @@
       "Microsoft.OpenApi/1.2.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
       "Mono.TextTemplating/2.2.1": {
@@ -347,14 +283,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/Npgsql.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Npgsql.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Npgsql.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Npgsql.dll": {}
         }
       },
       "Npgsql.EntityFrameworkCore.PostgreSQL/7.0.0-rc.2": {
@@ -366,14 +298,10 @@
           "Npgsql": "7.0.0-rc.2"
         },
         "compile": {
-          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.2.3": {
@@ -394,14 +322,10 @@
           "Microsoft.OpenApi": "1.2.3"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -413,27 +337,19 @@
           "Swashbuckle.AspNetCore.Swagger": "6.2.3"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
         }
       },
       "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -442,9 +358,7 @@
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {}
@@ -453,14 +367,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
@@ -472,14 +382,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/System.Text.Encodings.Web.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
@@ -498,14 +404,10 @@
           "System.Text.Encodings.Web": "7.0.0-rc.2.22472.3"
         },
         "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/System.Text.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/System.Text.Json.dll": {}
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
@@ -514,27 +416,19 @@
       "Vostok.Context/0.1.7-pre000015": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Vostok.Context.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Context.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Context.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Context.dll": {}
         }
       },
       "Vostok.Logging.Abstractions/1.0.31-pre000062": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Vostok.Logging.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Abstractions.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Abstractions.dll": {}
         }
       },
       "Vostok.Logging.Configuration/1.0.9-pre000016": {
@@ -543,14 +437,10 @@
           "Vostok.Logging.Abstractions": "1.0.31-pre000061"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.Configuration.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Configuration.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Configuration.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Configuration.dll": {}
         }
       },
       "Vostok.Logging.Console/1.0.10-pre000021": {
@@ -560,14 +450,10 @@
           "Vostok.Logging.Formatting": "1.0.14-pre000035"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.Console.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Console.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Console.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Console.dll": {}
         }
       },
       "Vostok.Logging.Context/1.0.5-pre000024": {
@@ -577,14 +463,10 @@
           "Vostok.Logging.Abstractions": "1.0.31-pre000061"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.Context.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Context.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Context.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Context.dll": {}
         }
       },
       "Vostok.Logging.File/1.0.23-pre000032": {
@@ -594,14 +476,10 @@
           "Vostok.Logging.Formatting": "1.0.14-pre000034"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.File.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.File.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.File.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.File.dll": {}
         }
       },
       "Vostok.Logging.Formatting/1.0.14-pre000035": {
@@ -610,14 +488,10 @@
           "Vostok.Logging.Abstractions": "1.0.31-pre000060"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.Formatting.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Formatting.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Formatting.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Formatting.dll": {}
         }
       },
       "Vostok.Logging.Microsoft/2.0.14-pre000017": {
@@ -629,14 +503,10 @@
           "Vostok.Logging.Formatting": "1.0.14-pre000035"
         },
         "compile": {
-          "lib/net6.0/Vostok.Logging.Microsoft.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Microsoft.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Vostok.Logging.Microsoft.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Vostok.Logging.Microsoft.dll": {}
         }
       }
     }
@@ -1550,19 +1420,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VOISTINU\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VOISTINU\\RiderProjects\\ROS\\ROS\\ROS.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj",
       "projectName": "ROS",
-      "projectPath": "C:\\Users\\VOISTINU\\RiderProjects\\ROS\\ROS\\ROS.csproj",
-      "packagesPath": "C:\\Users\\VOISTINU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VOISTINU\\RiderProjects\\ROS\\ROS\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VOISTINU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1631,8 +1501,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1644,7 +1513,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\VOISTINU\\.dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,7 +6,7 @@ public class Purchase : IPurchase
 {
     public  Cheque Cheque { get; }
     public  Shop Shop { get; }
-    public List<Product> Products { get; }
+    public Product[] Products { get; }
 
     public Purchase(InfoPurchaseRequest infoPurchaseRequest)
     {

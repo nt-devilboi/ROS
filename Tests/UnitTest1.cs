@@ -9,9 +9,9 @@ namespace Tests;
 
 public class Tests
 {
-    class FakeChequeRepository : IChequeRepository
+    class FakeRepository : IRepository
     {
-        public void Create(string shopId, double totalAmount, DateTime time)
+        public void Add(string shopId, double totalAmount, DateTime time)
         {
         }
 
@@ -38,7 +38,7 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var control = new ChequeController(new FakeChequeRepository(), new ConsoleLog());
+        var control = new PurchaseController(new FakeRepository(), new ConsoleLog());
         var products = new List<Product> { new () { ProductName = "apple", ProductPrice = 30 } };
         var infoPurchase = CreatePurchase(control, "Комсомльская 78", "кб", products);
         
@@ -51,7 +51,7 @@ public class Tests
         });
     }
 
-    private static Task<Result<PurchaseResponse>> CreatePurchase(ChequeController control,
+    private static Task<Result<PurchaseResponse>> CreatePurchase(PurchaseController control,
         string location,
         string name,
         List<Product> products)

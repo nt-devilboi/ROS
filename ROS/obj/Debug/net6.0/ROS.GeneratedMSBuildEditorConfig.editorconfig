@@ -8,13 +8,13 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ROS
 build_property.RootNamespace = ROS
-build_property.ProjectDir = C:\Users\VOISTINU\RiderProjects\ROS\ROS\
+build_property.ProjectDir = C:\Users\user\Desktop\back-ros\ROS\ROS\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\VOISTINU\RiderProjects\ROS\ROS
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\back-ros\ROS\ROS
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/VOISTINU/RiderProjects/ROS/ROS/staticFiles/index.cshtml]
+[C:/Users/user/Desktop/back-ros/ROS/ROS/staticFiles/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = c3RhdGljRmlsZXNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

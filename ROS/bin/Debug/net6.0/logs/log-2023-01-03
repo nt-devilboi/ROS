@@ -1,0 +1,28 @@
+﻿2023-01-03 17:08:39,103 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-03 17:08:39,376 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-03 17:08:39,446 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-03 17:08:39,525 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-03 17:08:39,652 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-03 17:36:07,011 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2023-01-03 19:47:00,229 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-03 19:47:00,356 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-03 19:47:00,378 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-03 19:47:00,384 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-03 19:47:00,386 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-03 19:50:55,477 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2023-01-03 19:51:18,271 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-03 19:51:18,387 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-03 19:51:18,413 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-03 19:51:18,420 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-03 19:51:18,420 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-03 19:58:19,328 INFO  complete
+2023-01-03 20:00:06,726 INFO  complete
+2023-01-03 20:05:46,244 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2023-01-03 20:08:44,867 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-01-03 20:08:45,002 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-01-03 20:08:45,014 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-01-03 20:08:45,020 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-01-03 20:08:45,021 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\user\Desktop\back-ros\ROS\ROS\
+2023-01-03 20:18:48,631 INFO  complete
+2023-01-03 20:34:38,907 INFO  complete
+2023-01-03 20:35:15,945 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...

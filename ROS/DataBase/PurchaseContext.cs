@@ -3,13 +3,13 @@ using ROS.Entity;
 
 namespace ROS.DataBase;
 
-public class ChequeContext : DbContext
+public class PurchaseContext : DbContext
 {
-    public DbSet<Cheque> Cheques { get; set; } = null!;
-    public DbSet<Product> Products { get; set; } = null!;
-    public DbSet<Shop> Shops { get; set; } = null!;
+    public DbSet<Cheque> cheques { get; set; }
+    public DbSet<Product> products { get; set; }
+    public DbSet<Shop> shops { get; set; } = null!;
     
-    public ChequeContext()
+    public PurchaseContext()
     {
         Database.EnsureDeleted();
         Database.EnsureCreated();
