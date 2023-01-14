@@ -2,7 +2,7 @@ using ROS.Entity;
 
 namespace ROS.Services;
 
-public interface IPurchase
+public interface IPurchaseDetails
 {
     public  Cheque Cheque { get; }
     public  Shop Shop { get; }

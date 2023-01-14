@@ -1,6 +1,6 @@
-using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using ROS.Entity;
+using ROS.Interface;
 using ROS.Services;
 using ROS.TemporaryBd;
 using Vostok.Logging.Abstractions;
@@ -13,53 +13,57 @@ public class PurchaseController : ControllerBase
 {
     private IRepository<Cheque> _chequeRepository;
     private IRepository<Product> _productRepository;
-
+    private IShopRepository _shopRepository;
     private ILog _log;
 
-    public PurchaseController(IRepository<Cheque> chequeRepository, IRepository<Product> productRepository, ILog log)
+    public PurchaseController(IRepository<Cheque> chequeRepository,
+        IRepository<Product> productRepository,
+        IShopRepository shopRepository,
+        ILog log)
     {
+        _shopRepository = shopRepository;
         _chequeRepository = chequeRepository;
         _productRepository = productRepository;
         _log = log;
     }
 
-    [HttpPost]
-    [Route("/addCheque")]
-    public async Task<List<Cheque>> AddFakeInBd()
+    [HttpGet]
+    [Route("/cheques")]
+    public async Task<List<Cheque>> Get()
     {
-        var list = TemporaryBd.TemporaryBd.GetSimpleCheque();
-        foreach (var cheque in list)
-        {
-            _chequeRepository.Add(cheque);
-            _chequeRepository.SaveChanges();
-        }
-
-        return list;
+        return await _chequeRepository.ToList();
     }
 
-
     [HttpGet]
-    [Route("/getcheque")]
-    public async Task<List<Cheque>> Get()
-        => await _chequeRepository.ToList();
-
+    [Route("/cheques/cheque")]
+    public async Task<Purchase> GetPurchase(Guid guid)
+    {
+        var cheque = await _chequeRepository.Get(guid);
+        var product = await _productRepository.Where(cheque.Id);
+        var shop = await _shopRepository.Get(cheque.ShopId);
+        var purchase = cheque.Join(product, shop);
+        return purchase;
+    }
 
     [HttpPost]
-    [Route("/newPurchase")]
-    public async Task<PurchaseResponse> AddPurchase([FromBody] InfoPurchaseRequest infoPurchase)
+    [Route("/addpurchase")]
+    public async Task<Purchase> AddPurchase([FromBody] Purchase purchase)
     {
-        var purchase = new Purchase(infoPurchase);
-        _chequeRepository.Add(purchase.Cheque);
-        
-        foreach (var product in purchase.Products) // написать отельный mildware для работы с репозиториями
+        var purchaseInfo = new PurchaseDetails(purchase);
+        _chequeRepository.Add(purchaseInfo.Cheque);
+        _chequeRepository.SaveChanges();
+
+        _shopRepository.Add(purchaseInfo.Shop);
+        _shopRepository.SaveChanges();
+
+        foreach (var product in purchase.Products) // написать отельный  для работы с репозиториями
         {
             _productRepository.Add(product);
             _productRepository.SaveChanges();
         }
-        _chequeRepository.SaveChanges();
-        _log.Info("complete");
 
-        return new PurchaseResponse()
-            { Shop = purchase.Shop, Cheque = purchase.Cheque, Products = purchase.Products};
+        _log.Info("complete");
+        HttpContext.Response.StatusCode = 201;
+        return purchaseInfo.ToPurchase();
     }
 }

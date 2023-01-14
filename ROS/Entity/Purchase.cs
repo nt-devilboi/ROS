@@ -1,6 +1,6 @@
 namespace ROS.Entity;
 
-public class InfoPurchaseRequest
+public class Purchase
 {
     public string NameShop { get; set; }
     public string Location { get; set; }

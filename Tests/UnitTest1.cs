@@ -1,32 +1,72 @@
-using System.Data.Common;
-using System.Security.Cryptography;
 using ROS;
 using ROS.Controllers;
 using ROS.Entity;
+using ROS.Interface;
 using Vostok.Logging.Console;
 
 namespace Tests;
 
 public class Tests
 {
-    class FakeRepository : IRepository
+    class FakeRepository<T> : IRepository<T>
     {
-        public void Add(string shopId, double totalAmount, DateTime time)
-        {
-        }
-
-        public Task<List<Cheque>> ToList()
+        public void Add(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Cheque> Get(Guid guid)
+        public Task<T> Get(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<T>> ToList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T[]> Where(Guid element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T> GetFirst(Guid element)
         {
             throw new NotImplementedException();
         }
 
         public void SaveChanges()
         {
+            throw new NotImplementedException();
+        }
+    }
+
+    
+    class FakeShopRepository : IShopRepository
+    {
+        public void Add(Shop entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Shop>> ToList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Shop[]> Where(string element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Shop> Get(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -38,25 +78,33 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var control = new PurchaseController(new FakeRepository(), new ConsoleLog());
-        var products = new List<Product> { new () { ProductName = "apple", ProductPrice = 30 } };
-        var infoPurchase = CreatePurchase(control, "Комсомльская 78", "кб", products);
-        
+        var control = new PurchaseController(new FakeRepository<Cheque>(),new FakeRepository<Product>(), new FakeShopRepository(), new ConsoleLog());
+        var chequeId = Guid.NewGuid();
+        var purchaseRequest = CreatePurchase(control, "Ленина 42", "Магнит", new Product[]
+        {
+            new Product()
+            {
+                ProductName = "чипсы", ChequeId = chequeId, Id = Guid.NewGuid(), ProductPrice = 20,
+            },
+            new Product()
+            {
+                ProductName = "Хлеб", ChequeId = chequeId, Id = Guid.NewGuid(), ProductPrice = 40,
+            }
+        });
+
+        var purchaseResponse = control.GetPurchase(chequeId);
         Assert.Multiple(() =>
         {
-            Assert.That(infoPurchase.Result.Value!.Shop.Location, Is.EqualTo("Комсомльская 78"));
-            Assert.That(infoPurchase.Result.Value!.Shop.NameShop, Is.EqualTo("кб"));
-            Assert.That(infoPurchase.Result.Value.Products[0].ProductPrice, Is.EqualTo(30));
-            Assert.That(infoPurchase.Result.Value.Shop.ShopId, Is.EqualTo("Комсомльская 78кб"));
+           Assert.Equals()
         });
     }
 
-    private static Task<Result<PurchaseResponse>> CreatePurchase(PurchaseController control,
+    private static Task<Purchase> CreatePurchase(PurchaseController control,
         string location,
         string name,
-        List<Product> products)
+        Product[] products)
     {
-        return control.AddPurchase(new InfoPurchaseRequest()
+        return control.AddPurchase(new Purchase()
         {
             Location = location,
             NameShop = name,

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj": {}
+    "C:\\Users\\VOISTINU\\Desktop\\MyBigProject\\ROS\\ROS\\ROS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj": {
+    "C:\\Users\\VOISTINU\\Desktop\\MyBigProject\\ROS\\ROS\\ROS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj",
+        "projectUniqueName": "C:\\Users\\VOISTINU\\Desktop\\MyBigProject\\ROS\\ROS\\ROS.csproj",
         "projectName": "ROS",
-        "projectPath": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\ROS.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\back-ros\\ROS\\ROS\\obj\\",
+        "projectPath": "C:\\Users\\VOISTINU\\Desktop\\MyBigProject\\ROS\\ROS\\ROS.csproj",
+        "packagesPath": "C:\\Users\\VOISTINU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VOISTINU\\Desktop\\MyBigProject\\ROS\\ROS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\VOISTINU\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -83,7 +83,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\VOISTINU\\.dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

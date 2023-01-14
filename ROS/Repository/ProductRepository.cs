@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using ROS.DataBase;
 using ROS.Entity;
 
@@ -11,25 +12,47 @@ public class ProductRepository : IRepository<Product>
     {
         _db.products.Add(new Product
         {
-            ProductId = product.ChequeId,
+            Id = product.ChequeId,
             ChequeId = product.ChequeId,
             ProductName = product.ProductName,
             ProductPrice = product.ProductPrice
         });
     }
-
+    
     public Task<List<Product>> ToList()
     {
         return Task.FromResult(_db.products.ToList());
     }
 
-    public Task<Product> Get(Guid guid)
+    public async Task<Product> Get(Guid guid)
     {
-        throw new NotImplementedException();
+        return (await _db.products.FirstOrDefaultAsync(product => product.Id == guid))!;
     }
 
+    public async Task<Product[]> GetAll(Guid chequeId)
+    {
+        return  Task.FromResult(_db.products.Where(product => product.ChequeId == chequeId)).Result.ToArray();
+    }
+    
+    public async Task<Product[]> Where(Guid element)
+    {
+        return _db.products.Where(product => product.ChequeId == element).ToArray();
+    }
     public void SaveChanges()
     {
         _db.SaveChanges();
     }
+
+   
+
+    public Task<Product> GetFirst(Guid element)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Product> GetFirst<TElement>(TElement element)
+    {
+        throw new NotImplementedException();
+    }
+
 }

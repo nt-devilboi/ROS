@@ -1,6 +1,8 @@
 using ROS;
 using ROS.DataBase;
 using ROS.Entity;
+using ROS.Interface;
+using ROS.Service;
 using Vostok.Logging.Abstractions;
 using Vostok.Logging.Console;
 using Vostok.Logging.File;
@@ -35,6 +37,7 @@ builder.Services.AddMvc();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IRepository<Cheque>, ChequeRepository>();
 builder.Services.AddSingleton<IRepository<Product>, ProductRepository>();
+builder.Services.AddSingleton<IShopRepository, ShopRepository>();
 builder.Services.AddSingleton<IProduct, Product>();
 builder.Services.AddSingleton<IShop, Shop>();
 builder.Services.AddScoped<PurchaseContext>();

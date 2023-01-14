@@ -2,32 +2,28 @@ using ROS.Entity;
 
 namespace ROS.Services;
 
-public class Purchase : IPurchase
+public class PurchaseDetails : IPurchaseDetails
 {
     public  Cheque Cheque { get; }
     public  Shop Shop { get; }
     public Product[] Products { get; }
 
-    public Purchase(InfoPurchaseRequest infoPurchaseRequest)
+    public PurchaseDetails(Purchase purchase)
     {
         Cheque = new Cheque()
         {
-            ShopId = infoPurchaseRequest.Location + infoPurchaseRequest.NameShop,
-            Time = infoPurchaseRequest.Time, TotalAmount = infoPurchaseRequest.Products.Sum(x => x.ProductPrice)
+            ShopId = purchase.Location + purchase.NameShop,
+            Time = purchase.Time, TotalAmount = purchase.Products.Sum(x => x.ProductPrice)
         };
 
         Shop = new Shop()
         {
-            ShopId = infoPurchaseRequest.Location + infoPurchaseRequest.NameShop,
-            Location = infoPurchaseRequest.Location,
-            NameShop = infoPurchaseRequest.NameShop
+            Id = purchase.Location + purchase.NameShop,
+            Location = purchase.Location,
+            NameShop = purchase.NameShop
         };
         
-        foreach (var product in infoPurchaseRequest.Products)
-        {
-            product.ChequeId = Cheque.ChequeId;
-        }
-
-        Products = infoPurchaseRequest.Products;
+        
+        Products = purchase.Products;
     }
 }

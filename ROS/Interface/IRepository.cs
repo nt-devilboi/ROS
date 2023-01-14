@@ -6,8 +6,11 @@ public interface IRepository<T>
 {
     public void Add(T entity);
 
+    public Task<T> Get(Guid id);
+    
     public Task<List<T>> ToList();
-    public Task<T> Get(Guid guid);
-    public void SaveChanges();
 
+    public Task<T[]> Where(Guid element);
+
+    public void SaveChanges();
 }
