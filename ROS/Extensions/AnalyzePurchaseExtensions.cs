@@ -15,7 +15,7 @@ public static class AnalyzePurchaseExtensions
             NameShop = purchaseDetails.Shop.NameShop,
             Location = purchaseDetails.Shop.Location,
             Products = purchaseDetails.Products,
-            Time = purchaseDetails.Cheque.Time
+            Date = purchaseDetails.Cheque.Time
         };
     }
 
@@ -31,7 +31,7 @@ public static class AnalyzePurchaseExtensions
             Location = shop.Location,
             NameShop = shop.NameShop,
             Products = product,
-            Time = cheque.Time
+            Date = cheque.Time
         };
     }
 }

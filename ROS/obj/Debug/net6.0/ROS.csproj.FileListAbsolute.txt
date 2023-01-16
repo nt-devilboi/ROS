@@ -164,8 +164,6 @@ C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.AssemblyInfo
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.csproj.CoreCompileInputs.cache
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.RazorAssemblyInfo.cache
-C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\ROS.RazorAssemblyInfo.cs
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\obj\Debug\net6.0\scopedcss\bundle\ROS.styles.css

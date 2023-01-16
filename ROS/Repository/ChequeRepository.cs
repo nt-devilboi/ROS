@@ -10,13 +10,7 @@ public class ChequeRepository : IRepository<Cheque>
 
     public void Add(Cheque cheque)
     {
-        _db.cheques.Add(new Cheque()
-        {
-            Id = cheque.Id,
-            ShopId = cheque.ShopId,
-            Time = cheque.Time,
-            TotalAmount = cheque.TotalAmount
-        });
+        _db.cheques.Add(cheque);
     }
     
 
@@ -27,7 +21,7 @@ public class ChequeRepository : IRepository<Cheque>
 
     public async Task<Cheque> Get(Guid guid)
     {
-        return (await _db.cheques.FirstOrDefaultAsync(cheque => cheque.Id == guid))!;
+        return (await _db.cheques.FindAsync(guid))!;
     }
 
     public void SaveChanges()
@@ -35,7 +29,7 @@ public class ChequeRepository : IRepository<Cheque>
         _db.SaveChanges();
     }
 
-    public Task<Cheque[]> Where(Guid element)
+    public Task<Cheque[]> Where(Guid chequeId)
     {
         throw new NotImplementedException();
     }

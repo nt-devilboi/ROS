@@ -28,18 +28,22 @@ public class PurchaseController : ControllerBase
     }
 
     [HttpGet]
-    [Route("/cheques")]
-    public async Task<List<Cheque>> Get()
+    [Route("/getcheques")]
+    public async Task<Purchase[]> Get()
     {
-        return await _chequeRepository.ToList();
+        var purchases = new List<Purchase>();
+        foreach (var cheque in  await _chequeRepository.ToList())
+            purchases.Add(await GetPurchase(cheque.Id));
+
+        return purchases.ToArray();
     }
 
     [HttpGet]
     [Route("/cheques/cheque")]
-    public async Task<Purchase> GetPurchase(Guid guid)
+    public async Task<Purchase> GetPurchase(Guid chequeId)
     {
-        var cheque = await _chequeRepository.Get(guid);
-        var product = await _productRepository.Where(cheque.Id);
+        var cheque = await _chequeRepository.Get(chequeId);
+        var product = await _productRepository.Where(chequeId);
         var shop = await _shopRepository.Get(cheque.ShopId);
         var purchase = cheque.Join(product, shop);
         return purchase;
@@ -63,7 +67,6 @@ public class PurchaseController : ControllerBase
         }
 
         _log.Info("complete");
-        HttpContext.Response.StatusCode = 201;
         return purchaseInfo.ToPurchase();
     }
 }

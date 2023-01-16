@@ -16,7 +16,7 @@ public class ShopRepository : IShopRepository
     
     public async Task<Shop> Get(string id)
     {
-        return (await _db.shops.FirstOrDefaultAsync(shop => shop.Id == id))!;
+        return (await _db.shops.FindAsync(id))!;
     }
 
     public async Task<List<Shop>> ToList()

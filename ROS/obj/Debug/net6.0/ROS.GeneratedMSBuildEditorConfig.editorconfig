@@ -14,7 +14,3 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS
 build_property._RazorSourceGeneratorDebug = 
-
-[C:/Users/VOISTINU/Desktop/MyBigProject/ROS/ROS/staticFiles/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = c3RhdGljRmlsZXNcaW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 

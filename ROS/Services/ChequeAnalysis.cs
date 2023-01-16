@@ -13,7 +13,8 @@ public class PurchaseDetails : IPurchaseDetails
         Cheque = new Cheque()
         {
             ShopId = purchase.Location + purchase.NameShop,
-            Time = purchase.Time, TotalAmount = purchase.Products.Sum(x => x.ProductPrice)
+            Time = purchase.Date, TotalAmount = purchase.Products.Sum(x => x.ProductPrice),
+            Id = purchase.Products[0].ChequeId
         };
 
         Shop = new Shop()
