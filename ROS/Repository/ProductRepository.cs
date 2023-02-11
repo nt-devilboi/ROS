@@ -18,6 +18,12 @@ public class ProductRepository : IRepository<Product>
         return Task.FromResult(_db.products.ToList());
     }
 
+    public Task<IEnumerable<Cheque>> TakePage(int limit, int page)
+    {
+        throw new NotImplementedException();
+    }
+
+
     public async Task<Product> Get(Guid guid)
     {
         return (await _db.products.FirstOrDefaultAsync(product => product.Id == guid))!;

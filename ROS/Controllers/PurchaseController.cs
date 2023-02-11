@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ROS.Entity;
 using ROS.Interface;
+using ROS.Service;
 using ROS.Services;
 using ROS.TemporaryBd;
 using Vostok.Logging.Abstractions;
@@ -15,27 +16,44 @@ public class PurchaseController : ControllerBase
     private IRepository<Product> _productRepository;
     private IShopRepository _shopRepository;
     private ILog _log;
+    private IAnalyzePurchase _analyzePurchase;
 
     public PurchaseController(IRepository<Cheque> chequeRepository,
         IRepository<Product> productRepository,
         IShopRepository shopRepository,
-        ILog log)
+        ILog log,
+        IAnalyzePurchase analyzePurchase)
     {
         _shopRepository = shopRepository;
         _chequeRepository = chequeRepository;
         _productRepository = productRepository;
         _log = log;
+        _analyzePurchase = analyzePurchase;
     }
 
     [HttpGet]
-    [Route("/getcheques")]
-    public async Task<Purchase[]> Get()
+    [Route("/cheques")]
+    public async Task<List<PurchaseInfo>> GetPagePurchaseInfo(int limit, int page)
     {
-        var purchases = new List<Purchase>();
-        foreach (var cheque in  await _chequeRepository.ToList())
-            purchases.Add(await GetPurchase(cheque.Id));
+        var purchaseInfos = new List<PurchaseInfo>();
+        _log.Info("начало");
+        foreach (var cheque in await _chequeRepository.TakePage(limit, page))
+        {
+            _log.Info("внутри цикла элементов");
+            var shop = await _shopRepository.Get(cheque.ShopId);
+            var mainInfo = new PurchaseInfo()
+            {
+                Id = cheque.Id,
+                TotalAmount = cheque.TotalAmount,
+                NameShop = shop.NameShop,
+                Location = shop.Location
+            };
+            
+            _log.Info("возвращаем");
+            purchaseInfos.Add(mainInfo);
+        }
 
-        return purchases.ToArray();
+        return purchaseInfos;
     }
 
     [HttpGet]
@@ -66,7 +84,8 @@ public class PurchaseController : ControllerBase
             _productRepository.SaveChanges();
         }
 
-        _log.Info("complete");
+        HttpContext.Response.StatusCode = 201;
+        _log.Info("данные загруженны");
         return purchaseInfo.ToPurchase();
     }
 }

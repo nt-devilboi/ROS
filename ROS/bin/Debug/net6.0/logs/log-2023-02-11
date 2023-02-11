@@ -1,0 +1,195 @@
+﻿2023-02-11 10:38:03,588 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-02-11 10:38:03,605 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-02-11 10:38:03,607 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-02-11 10:38:03,608 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-02-11 10:38:03,608 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\
+2023-02-11 10:39:41,281 ERROR [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ROS.ChequeRepository.SaveChanges() in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Repository\ChequeRepository.cs:line 43
+   at ROS.Controllers.PurchaseController.AddPurchase(Purchase purchase) in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Controllers\PurchaseController.cs:line 75
+   at lambda_method14(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-02-11 10:39:41,408 ERROR [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details. ---> Npgsql.PostgresException: 23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_cheques"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|227_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ROS.ChequeRepository.SaveChanges() in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Repository\ChequeRepository.cs:line 43
+   at ROS.Controllers.PurchaseController.AddPurchase(Purchase purchase) in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Controllers\PurchaseController.cs:line 75
+   at lambda_method14(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-02-11 10:39:59,010 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-02-11 10:39:59,026 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-02-11 10:39:59,029 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-02-11 10:39:59,029 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-02-11 10:39:59,030 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\
+2023-02-11 10:40:42,710 INFO  данные загруженны
+2023-02-11 10:41:51,858 INFO  данные загруженны
+2023-02-11 10:42:59,696 INFO  начало
+2023-02-11 10:43:00,127 INFO  начало
+2023-02-11 10:43:42,275 INFO  начало
+2023-02-11 10:43:42,284 INFO  внутри цикла элементов
+2023-02-11 10:43:42,289 INFO  возвращаем
+2023-02-11 10:43:42,289 INFO  внутри цикла элементов
+2023-02-11 10:43:42,289 INFO  возвращаем
+2023-02-11 10:44:25,110 INFO  начало
+2023-02-11 10:44:25,111 INFO  внутри цикла элементов
+2023-02-11 10:44:25,111 INFO  возвращаем
+2023-02-11 10:44:25,111 INFO  внутри цикла элементов
+2023-02-11 10:44:25,111 INFO  возвращаем
+2023-02-11 10:44:28,823 INFO  начало
+2023-02-11 10:48:17,457 INFO  начало
+2023-02-11 10:48:23,710 INFO  начало
+2023-02-11 10:48:36,171 INFO  начало
+2023-02-11 10:55:03,623 INFO  начало
+2023-02-11 10:55:03,828 INFO  внутри цикла элементов
+2023-02-11 10:55:03,829 INFO  возвращаем
+2023-02-11 10:55:03,829 INFO  внутри цикла элементов
+2023-02-11 10:55:03,829 INFO  возвращаем
+2023-02-11 10:55:03,840 INFO  начало
+2023-02-11 10:55:03,842 INFO  внутри цикла элементов
+2023-02-11 10:55:03,842 INFO  возвращаем
+2023-02-11 10:55:03,842 INFO  внутри цикла элементов
+2023-02-11 10:55:03,845 INFO  возвращаем
+2023-02-11 10:55:09,937 INFO  начало
+2023-02-11 10:55:09,939 INFO  внутри цикла элементов
+2023-02-11 10:55:09,939 INFO  возвращаем
+2023-02-11 10:55:09,939 INFO  внутри цикла элементов
+2023-02-11 10:55:09,939 INFO  возвращаем
+2023-02-11 10:55:10,113 INFO  начало
+2023-02-11 10:55:10,114 INFO  внутри цикла элементов
+2023-02-11 10:55:10,114 INFO  возвращаем
+2023-02-11 10:55:10,115 INFO  внутри цикла элементов
+2023-02-11 10:55:10,115 INFO  возвращаем
+2023-02-11 10:55:24,527 INFO  [Microsoft.Hosting.Lifetime] Application is shutting down...
+2023-02-11 10:55:30,817 INFO  [Microsoft.Hosting.Lifetime] Now listening on: https://localhost:7000
+2023-02-11 10:55:30,833 INFO  [Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5088
+2023-02-11 10:55:30,835 INFO  [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2023-02-11 10:55:30,836 INFO  [Microsoft.Hosting.Lifetime] Hosting environment: Development
+2023-02-11 10:55:30,836 INFO  [Microsoft.Hosting.Lifetime] Content root path: C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\
+2023-02-11 10:56:46,836 INFO  данные загруженны
+2023-02-11 10:57:17,076 ERROR [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Cheque' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at ROS.ChequeRepository.Add(Cheque cheque) in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Repository\ChequeRepository.cs:line 13
+   at ROS.Controllers.PurchaseController.AddPurchase(Purchase purchase) in C:\Users\VOISTINU\Desktop\MyBigProject\ROS\ROS\Controllers\PurchaseController.cs:line 75
+   at lambda_method14(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-02-11 10:57:25,498 INFO  начало
+2023-02-11 10:57:25,814 INFO  внутри цикла элементов
+2023-02-11 10:57:25,819 INFO  возвращаем
+2023-02-11 10:57:25,838 INFO  начало
+2023-02-11 10:57:25,844 INFO  внутри цикла элементов
+2023-02-11 10:57:25,845 INFO  возвращаем
+2023-02-11 10:58:23,851 INFO  начало
+2023-02-11 10:58:23,852 INFO  внутри цикла элементов
+2023-02-11 10:58:23,852 INFO  возвращаем
+2023-02-11 10:58:24,024 INFO  начало
+2023-02-11 10:58:24,025 INFO  внутри цикла элементов
+2023-02-11 10:58:24,025 INFO  возвращаем
+2023-02-11 11:05:13,908 INFO  начало
+2023-02-11 11:05:14,103 INFO  внутри цикла элементов
+2023-02-11 11:05:14,104 INFO  возвращаем
+2023-02-11 11:05:14,118 INFO  начало
+2023-02-11 11:05:14,119 INFO  внутри цикла элементов
+2023-02-11 11:05:14,119 INFO  возвращаем
+2023-02-11 11:06:31,815 INFO  начало
+2023-02-11 11:06:31,816 INFO  внутри цикла элементов
+2023-02-11 11:06:31,819 INFO  возвращаем
+2023-02-11 11:06:32,013 INFO  начало
+2023-02-11 11:06:32,013 INFO  внутри цикла элементов
+2023-02-11 11:06:32,013 INFO  возвращаем

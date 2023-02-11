@@ -41,6 +41,7 @@ builder.Services.AddSingleton<IShopRepository, ShopRepository>();
 builder.Services.AddSingleton<IProduct, Product>();
 builder.Services.AddSingleton<IShop, Shop>();
 builder.Services.AddScoped<PurchaseContext>();
+builder.Services.AddSingleton<IAnalyzePurchase, AnalyzePurchase>();
 
 builder.Services.AddSingleton<ILog>(log);
 var app = builder.Build();

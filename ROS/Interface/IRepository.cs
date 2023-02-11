@@ -10,6 +10,8 @@ public interface IRepository<T>
     
     public Task<List<T>> ToList();
 
+    public Task<IEnumerable<Cheque>> TakePage(int limit, int page);
+    
     public Task<T[]> Where(Guid chequeId);
 
     public void SaveChanges();
